@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <title>player_characters, or so</title>
+	<meta charset="UTF-8">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+  <div id='disclaimer' style=' z-index:8;position:fixed;top:20%;width:40%; display:none;'>This game was modeled after the W*rl*cks game mode in W*rcr*ft 3. Please no sue.</div>
+<div id='background_text'><div>Loading...</div></div>
+
+<div id='gui'>
+	<div id='menu_wrapper'>
+		<button id='menu_wrapper_button' class='attack_button menu_item'>Menu:</button>
+		
+		<div id='menu'>
+			<div id='config_wrapper'> <button id='config_wrapper_button' class='attack_button menu_item'>CONFIG</button>
+				<div id='round_config'></div>
+			</div>
+			<button onclick="pauseWrapper()" class='menu_item attack_button' id='pauseRound' >PAUSE</button>
+			<button onclick="startRoundWrapper()" class='menu_item attack_button' id='startRound' >START ROUND</button>
+			<button onclick="endRoundWrapper()" class='menu_item attack_button' id='endRound' >END ROUND</button>
+			<button onclick="exitWrapper()" class='menu_item attack_button' >EXIT</button>	
+		</div>
+		
+
+		
+	</div>
+<!--	<button onclick='goldup()'>up</button>
+	<button onclick='golddown()'>down</button>	-->
+	<div id='stats'>
+		<div id='gold_wrapper'>Gold: <span id='gold_counter'>0</span></div>	
+		<div id='timer_wrapper'><!--Time:--> <span id='timer_counter'></span></div>
+	<!--	<div id='player_wrapper'>Players: <span id='player_counter'>-1</span></div> -->
+	</div>
+
+	<div id='attack_div'></div>
+	<div id='tooltip_wrapper'><div id='tooltip'></div></div>
+	<div id='lives_box'></div>
+</div>
+
+
+<div id='debug' style='position:absolute;top:100px;right:0px;'>
+	<span id='framerate'></span></br>
+</div>
+
+		
+<!-- <canvas id="canvasGUI"></canvas> -->
+<canvas id="canvas"></canvas>
+<img id='background' src='img/background_border.png' style="display:none" />
+<canvas id="canvasBackground" style="display:none"></canvas>
+
+
+    <script src="/socket.io/socket.io.js"></script>
+<!--    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>-->
+
+   <script src="js/pathfinder.js"></script>
+   <script src="js/objects.js"></script>
+   <script src="js/script.js"></script>
+      
+  </body>
+</html>
